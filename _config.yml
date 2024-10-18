@@ -14,9 +14,9 @@ lang: en
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Blogging Dim # the main title
+title: Dim's Blog # the main title
 
-# tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: Penetration tester, OSINT analyst # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Dim's page
@@ -88,17 +88,17 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
-theme_mode: [dark] # [light | dark]
+theme_mode: [dark | light] # [light | dark]
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-cdn: "https://chirpy-img.netlify.app"
+cdn: "https://dgeorgak.github.io/"
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "/commons/avatar.jpg"
+avatar: "/assets/img/avatar.jpg"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
