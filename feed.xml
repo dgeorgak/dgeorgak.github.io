@@ -4,7 +4,7 @@
   <id>https://dgeorgak.github.io/</id>
   <title>Dim's Blog</title>
   <subtitle>Dim's page</subtitle>
-  <updated>2024-10-18T11:09:47+00:00</updated>
+  <updated>2024-10-18T11:45:24+00:00</updated>
   <author>
     <name>Dim</name>
     <uri>https://dgeorgak.github.io/</uri>
@@ -20,113 +20,61 @@
 
   
   <entry>
-    <title>Customize the Favicon</title>
-    <link href="https://dgeorgak.github.io/posts/customize-the-favicon/" rel="alternate" type="text/html" title="Customize the Favicon" />
-    <published>2019-08-10T16:34:00+00:00</published>
+    <title>feroxbuster</title>
+    <link href="https://dgeorgak.github.io/posts/feroxbuster/" rel="alternate" type="text/html" title="feroxbuster" />
+    <published>2024-05-29T00:00:00+00:00</published>
   
-    <updated>2019-08-10T16:34:00+00:00</updated>
+    <updated>2024-05-29T00:00:00+00:00</updated>
   
-    <id>https://dgeorgak.github.io/posts/customize-the-favicon/</id>
-    <content src="https://dgeorgak.github.io/posts/customize-the-favicon/" />
+    <id>https://dgeorgak.github.io/posts/feroxbuster/</id>
+    <content src="https://dgeorgak.github.io/posts/feroxbuster/" />
     <author>
-      <name>cotes</name>
+      <name>Dim</name>
     </author>
 
   
     
-    <category term="Blogging" />
+    <category term="Tools" />
     
-    <category term="Tutorial" />
+    <category term="feroxbuster" />
     
   
 
-  <summary>The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.
+  <summary>Imagine the following target: https://www.myexampletarget.com.  Now imagine that somewhere in there is an admin page that presents a login screen that is susceptible to SQLi, and as a bonus it showcases the version of the webapp behind it.  The login page’s url is https://www.myexampletarget.com/dev/pages/member.admin.
 
-Generate the favicon
-
-Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool Real Favicon Generator and click the button Select your Favicon image ...</summary>
+But there is one caveat.  You do not know about it.  You do not know the ur...</summary>
 
   </entry>
 
   
   <entry>
-    <title>Getting Started</title>
-    <link href="https://dgeorgak.github.io/posts/getting-started/" rel="alternate" type="text/html" title="Getting Started" />
-    <published>2019-08-09T12:55:00+00:00</published>
+    <title>nmap intro</title>
+    <link href="https://dgeorgak.github.io/posts/nmap-intro/" rel="alternate" type="text/html" title="nmap intro" />
+    <published>2024-05-26T00:00:00+00:00</published>
   
-    <updated>2019-08-09T12:55:00+00:00</updated>
+    <updated>2024-05-26T00:00:00+00:00</updated>
   
-    <id>https://dgeorgak.github.io/posts/getting-started/</id>
-    <content src="https://dgeorgak.github.io/posts/getting-started/" />
+    <id>https://dgeorgak.github.io/posts/nmap-intro/</id>
+    <content src="https://dgeorgak.github.io/posts/nmap-intro/" />
     <author>
-      <name>cotes</name>
+      <name>Dim</name>
     </author>
 
   
     
-    <category term="Blogging" />
+    <category term="Tools" />
     
-    <category term="Tutorial" />
-    
-  
-
-  <summary>Get started with Chirpy basics in this comprehensive overview. You will learn how to install, configure, and use your first Chirpy-based website, as well as deploy it to a web server.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Writing a New Post</title>
-    <link href="https://dgeorgak.github.io/posts/write-a-new-post/" rel="alternate" type="text/html" title="Writing a New Post" />
-    <published>2019-08-08T06:10:00+00:00</published>
-  
-    <updated>2019-08-08T06:10:00+00:00</updated>
-  
-    <id>https://dgeorgak.github.io/posts/write-a-new-post/</id>
-    <content src="https://dgeorgak.github.io/posts/write-a-new-post/" />
-    <author>
-      <name>cotes</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
+    <category term="nmap" />
     
   
 
-  <summary>This tutorial will guide you how to write a post in the Chirpy template, and it’s worth reading even if you’ve used Jekyll before, as many features require specific variables to be set.
+  <summary>So you have a target IP and want to scan for open ports.
+If you have no knowledge of nmap then I would suggest to go through its man pages (as you should for any cli tool), but in the meantime you can use this specific command to -hopefully- get some quick results.
+nmap target-IP
 
-Naming and Path
-
-Create a new file named YYYY-MM-DD-TITLE.EXTENSION and put it in the _posts of the root directory. Please note that the EXTENSION must be one of md and markdown. If you want to save time of cre...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Text and Typography</title>
-    <link href="https://dgeorgak.github.io/posts/text-and-typography/" rel="alternate" type="text/html" title="Text and Typography" />
-    <published>2019-08-08T03:33:00+00:00</published>
-  
-    <updated>2019-08-08T03:33:00+00:00</updated>
-  
-    <id>https://dgeorgak.github.io/posts/text-and-typography/</id>
-    <content src="https://dgeorgak.github.io/posts/text-and-typography/" />
-    <author>
-      <name>cotes</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Demo" />
-    
-  
-
-  <summary>Examples of text, typography, math equations, diagrams, flowcharts, pictures, videos, and more.</summary>
+This is the most basic of scans that nmap can do.
+So what does this do?
+It scans the target IP’s top 1000 ports to ...</summary>
 
   </entry>
 
