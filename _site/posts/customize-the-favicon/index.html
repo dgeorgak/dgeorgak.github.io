@@ -232,6 +232,11 @@
   }
 
   const modeToggle = new ModeToggle();
+
+  document.getElementById('mode-toggle').addEventListener('click', function () {
+    console.log("Mode toggle button clicked"); // Temporary check
+    modeToggle.flipMode();
+  });
 </script>
 
   
