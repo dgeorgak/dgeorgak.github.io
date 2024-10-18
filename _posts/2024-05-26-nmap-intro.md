@@ -36,9 +36,10 @@ Then add the following flags in your command:
 - `-T4` defines the speed at which nmap runs the scan.  You can pick any option between `-T0` (slowest) to `-T5` "fastest".  But be aware about the fact that the faster the scan runs, the easier it gets for your scan to be detected.  
 - `-A`, also known as "Aggressive" scan, is used to detect service versions, the underlying OS, runs scripts to gather additional info and performs a traceroute.  This option makes your activities very "loud", which in turn makes it easy for intrusion detection systems to notice your scanning the system.
 - `-p-` means that you ask nmap to scan all (65535) ports rather than the top 1000 which are scanned by default.
-The output that these flags can generate can become very complex, depending on the findings.  As mentioned earlier this is not only presenting the ports found, but also their versions and any other information that could be retrieved, the operating system of the target, and the results of the tests run by the nmap scripts.
+The output that these flags can generate can become very complex, depending on the findings.  As mentioned earlier this is not only presenting the ports found, but also their versions and any other information that could be retrieved, the operating system of the target, and the results of the tests run by the nmap scripts.  
+
 The example below could be the result of scanning a target:
-```
+```terminal  
 Starting Nmap 7.91 ( https://nmap.org ) at 2023-10-04 13:22 UTC
 Nmap scan report for 10.10.228.174 (10.10.228.174)
 Host is up (0.076s latency).
@@ -71,7 +72,7 @@ PORT   STATE SERVICE VERSION
 Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 726.05 seconds
+Nmap done: 1 IP address (1 host up) scanned in 726.05 seconds  
 ```
 
 Before I close this I want to point out one more thing that is important to keep in mind.
@@ -82,4 +83,3 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
 - `-Pn` is used to tell nmap to skip the host discovery phase and assume that the target host is online.  Even if ICMP requests are blocked, nmap will still run its scans on the target
 
 I will be making another post elaborating on other available nmap options that might come in handy in your enumeration processes, so come back for more.
-

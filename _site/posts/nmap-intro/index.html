@@ -485,7 +485,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="814 words"
+  title="845 words"
 >
   <em>4 min</em> read</span>
 
@@ -541,17 +541,53 @@ Then add the following flags in your command:
   <li><code class="language-plaintext highlighter-rouge">-T4</code> defines the speed at which nmap runs the scan.  You can pick any option between <code class="language-plaintext highlighter-rouge">-T0</code> (slowest) to <code class="language-plaintext highlighter-rouge">-T5</code> “fastest”.  But be aware about the fact that the faster the scan runs, the easier it gets for your scan to be detected.</li>
   <li><code class="language-plaintext highlighter-rouge">-A</code>, also known as “Aggressive” scan, is used to detect service versions, the underlying OS, runs scripts to gather additional info and performs a traceroute.  This option makes your activities very “loud”, which in turn makes it easy for intrusion detection systems to notice your scanning the system.</li>
   <li><code class="language-plaintext highlighter-rouge">-p-</code> means that you ask nmap to scan all (65535) ports rather than the top 1000 which are scanned by default.
-The output that these flags can generate can become very complex, depending on the findings.  As mentioned earlier this is not only presenting the ports found, but also their versions and any other information that could be retrieved, the operating system of the target, and the results of the tests run by the nmap scripts.
-The example below could be the result of scanning a target:
-```
-Starting Nmap 7.91 ( https://nmap.org ) at 2023-10-04 13:22 UTC
+The output that these flags can generate can become very complex, depending on the findings.  As mentioned earlier this is not only presenting the ports found, but also their versions and any other information that could be retrieved, the operating system of the target, and the results of the tests run by the nmap scripts.</li>
+</ul>
+
+<p>The example below could be the result of scanning a target:</p>
+<div class="language-terminal highlighter-rouge"><div class="code-header">
+        <span data-label-text="Terminal"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre><span class="go">Starting Nmap 7.91 ( https://nmap.org ) at 2023-10-04 13:22 UTC
 Nmap scan report for 10.10.228.174 (10.10.228.174)
 Host is up (0.076s latency).
 Not shown: 65532 closed ports
 PORT   STATE SERVICE VERSION
 21/tcp open  ftp     vsftpd 3.0.3
 | ftp-anon: Anonymous FTP login allowed (FTP code 230)
-|<em>-rw-r–r–    1 0        0             119 May 17  2020 note.txt
+|_-rw-r--r--    1 0        0             119 May 17  2020 note.txt
 | ftp-syst: 
 |   STAT: 
 | FTP server status:
@@ -565,20 +601,19 @@ PORT   STATE SERVICE VERSION
 |      At session startup, client count was 3
 |      vsFTPd 3.0.3 - secure, fast, stable
 |_End of status
-22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
-| ssh-hostkey: 
+</span><span class="gp">22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux;</span><span class="w"> </span>protocol 2.0<span class="o">)</span>
+<span class="go">| ssh-hostkey: 
 |   2048 16:7f:2f:fe:0f:ba:98:77:7d:6d:3e:b6:25:72:c6:a3 (RSA)
 |   256 2e:3b:61:59:4b:c4:29:b5:e8:58:39:6f:6f:e9:9b:ee (ECDSA)
-|</em>  256 ab:16:2e:79:20:3c:9b:0a:01:9c:8c:44:26:01:58:04 (ED25519)
+|_  256 ab:16:2e:79:20:3c:9b:0a:01:9c:8c:44:26:01:58:04 (ED25519)
 80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
 |_http-server-header: Apache/2.4.29 (Ubuntu)
-|_http-title: Site doesn’t have a title (text/html).
-Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel</li>
-</ul>
-
-<p>Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 726.05 seconds
-```</p>
+|_http-title: Site doesn't have a title (text/html).
+</span><span class="gp">Service Info: OSs: Unix, Linux;</span><span class="w"> </span>CPE: cpe:/o:linux:linux_kernel
+<span class="go">
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 726.05 seconds  
+</span></pre></td></tr></tbody></table></code></div></div>
 
 <p>Before I close this I want to point out one more thing that is important to keep in mind.
 Every time nmap is called to gather information about a host (or a set of), before it performs the port scan it starts a process of gathering information.  One of theses steps is pinging the target hosts to assess whether they are reachable in the network.   This is done by default.<br />
@@ -590,7 +625,6 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
 </ul>
 
 <p>I will be making another post elaborating on other available nmap options that might come in handy in your enumeration processes, so come back for more.</p>
-
 
   </div>
 
@@ -738,6 +772,13 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/feroxbuster/">feroxbuster</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/nmap-intro/">nmap intro</a>
         </li>
       
@@ -783,24 +824,6 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -822,6 +845,11 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
     
     
     
+  
+    
+    
+    
+    
       
     
   
@@ -829,7 +857,10 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
     
     
     
-      
+  
+    
+    
+    
     
   
     
@@ -845,7 +876,19 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
     
     
     
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
     
   
     
@@ -859,7 +902,31 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
     
     
     
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -890,13 +957,16 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
         <a class="post-tag btn btn-outline-primary" href="/tags/intro/">intro</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/scanning/">scanning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/hidden-directory/">hidden directory</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/nmap/">nmap</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/reconnaissance/">reconnaissance</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/scanning/">scanning</a>
       
     </div>
   </section>
@@ -951,6 +1021,17 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
 
   
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
 
@@ -960,6 +1041,43 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
 
 
 
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/feroxbuster/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1716930000"
+  data-df="ll"
+  
+>
+  May 29, 2024
+</time>
+
+              <h4 class="pt-0 my-2">feroxbuster</h4>
+              <div class="text-muted">
+                <p>Imagine the following target: https://www.myexampletarget.com.  Now imagine that somewhere in there is an admin page that presents a login screen that is susceptible to SQLi, and as a bonus it show...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
 
 
             
@@ -977,9 +1095,13 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
   
 
   
-    <div class="btn btn-outline-primary disabled" aria-label="Newer">
-      <p>-</p>
-    </div>
+    <a
+      href="/posts/feroxbuster/"
+      class="btn btn-outline-primary"
+      aria-label="Newer"
+    >
+      <p>feroxbuster</p>
+    </a>
   
 </nav>
 
@@ -1071,24 +1193,6 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -1110,6 +1214,11 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
     
     
     
+  
+    
+    
+    
+    
       
     
   
@@ -1117,7 +1226,10 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
     
     
     
-      
+  
+    
+    
+    
     
   
     
@@ -1133,7 +1245,19 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
     
     
     
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
     
   
     
@@ -1147,7 +1271,31 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
     
     
     
+  
+    
+    
+    
+    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
     
   
     
@@ -1178,13 +1326,16 @@ Thankfully, there is a way to force nmap to treat every target as a live host:
         <a class="post-tag btn btn-outline-primary" href="/tags/intro/">intro</a>
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/scanning/">scanning</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/hidden-directory/">hidden directory</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/nmap/">nmap</a>
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/reconnaissance/">reconnaissance</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/scanning/">scanning</a>
       
     </div>
   </section>

@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Dim's Blog</title>
   <subtitle>Dim's page</subtitle>
-  <updated>2024-10-18T14:28:16+03:00</updated>
+  <updated>2024-10-18T14:43:31+03:00</updated>
   <author>
     <name>Dim</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,34 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>feroxbuster</title>
+    <link href="http://localhost:4000/posts/feroxbuster/" rel="alternate" type="text/html" title="feroxbuster" />
+    <published>2024-05-29T00:00:00+03:00</published>
+  
+    <updated>2024-05-29T00:00:00+03:00</updated>
+  
+    <id>http://localhost:4000/posts/feroxbuster/</id>
+    <content src="http://localhost:4000/posts/feroxbuster/" />
+    <author>
+      <name>Dim</name>
+    </author>
+
+  
+    
+    <category term="Tools" />
+    
+    <category term="feroxbuster" />
+    
+  
+
+  <summary>Imagine the following target: https://www.myexampletarget.com.  Now imagine that somewhere in there is an admin page that presents a login screen that is susceptible to SQLi, and as a bonus it showcases the version of the webapp behind it.  The login page’s url is https://www.myexampletarget.com/dev/pages/member.admin.
+
+But there is one caveat.  You do not know about it.  You do not know the ur...</summary>
+
+  </entry>
 
   
   <entry>
