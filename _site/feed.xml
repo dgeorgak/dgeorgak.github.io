@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Dim online</title>
   <subtitle>Dim online</subtitle>
-  <updated>2024-10-19T18:32:29+03:00</updated>
+  <updated>2024-10-19T19:21:28+03:00</updated>
   <author>
     <name>Dim</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/feroxbuster/" rel="alternate" type="text/html" title="feroxbuster" />
     <published>2024-05-29T00:00:00+03:00</published>
   
-    <updated>2024-05-29T00:00:00+03:00</updated>
+    <updated>2024-10-18T14:44:33+03:00</updated>
   
     <id>http://localhost:4000/posts/feroxbuster/</id>
     <content src="http://localhost:4000/posts/feroxbuster/" />
@@ -52,7 +52,7 @@ But there is one caveat.  You do not know about it.  You do not know the ur...</
     <link href="http://localhost:4000/posts/nmap-intro/" rel="alternate" type="text/html" title="nmap intro" />
     <published>2024-05-26T00:00:00+03:00</published>
   
-    <updated>2024-05-26T00:00:00+03:00</updated>
+    <updated>2024-10-18T14:44:33+03:00</updated>
   
     <id>http://localhost:4000/posts/nmap-intro/</id>
     <content src="http://localhost:4000/posts/nmap-intro/" />
