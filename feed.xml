@@ -4,7 +4,7 @@
   <id>https://dgeorgak.github.io/</id>
   <title>Dim online</title>
   <subtitle>Dim online</subtitle>
-  <updated>2024-10-19T19:20:15+00:00</updated>
+  <updated>2024-11-23T14:05:59+00:00</updated>
   <author>
     <name>Dim</name>
     <uri>https://dgeorgak.github.io/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>CTF vs Pentest engagement</title>
+    <link href="https://dgeorgak.github.io/posts/CTF-vs-Pentest-engagement/" rel="alternate" type="text/html" title="CTF vs Pentest engagement" />
+    <published>2024-09-18T00:00:00+00:00</published>
+  
+    <updated>2024-09-18T00:00:00+00:00</updated>
+  
+    <id>https://dgeorgak.github.io/posts/CTF-vs-Pentest-engagement/</id>
+    <content src="https://dgeorgak.github.io/posts/CTF-vs-Pentest-engagement/" />
+    <author>
+      <name>Dim</name>
+    </author>
+
+  
+    
+    <category term="CTF" />
+    
+    <category term="Pentesting" />
+    
+  
+
+  <summary>One of the common misconceptions for new people joining the pentesting community is that a CTF emulates a real pentest engagement.  And it makes sense, because a CTF is among the first things that an aspiring penetration tester tackles that gives them a sample of the experience that is a pentest.  This is what they know.  This is also what I used to know, before I got a real glimpse of the actu...</summary>
+
+  </entry>
 
   
   <entry>
