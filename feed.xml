@@ -4,7 +4,7 @@
   <id>https://dgeorgak.github.io/</id>
   <title>Dim online</title>
   <subtitle>Dim online</subtitle>
-  <updated>2024-11-30T13:54:15+00:00</updated>
+  <updated>2025-01-11T19:23:43+00:00</updated>
   <author>
     <name>Dim</name>
     <uri>https://dgeorgak.github.io/</uri>
@@ -13,10 +13,36 @@
   <link rel="alternate" type="text/html" hreflang="en"
     href="https://dgeorgak.github.io/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
-  <rights> © 2024 Dim </rights>
+  <rights> © 2025 Dim </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>A quick and easy web server</title>
+    <link href="https://dgeorgak.github.io/posts/a-quick-and-easy-web-server/" rel="alternate" type="text/html" title="A quick and easy web server" />
+    <published>2025-01-11T00:00:00+00:00</published>
+  
+    <updated>2025-01-11T00:00:00+00:00</updated>
+  
+    <id>https://dgeorgak.github.io/posts/a-quick-and-easy-web-server/</id>
+    <content src="https://dgeorgak.github.io/posts/a-quick-and-easy-web-server/" />
+    <author>
+      <name>Dim</name>
+    </author>
+
+  
+    
+    <category term="Tools" />
+    
+  
+
+  <summary>There are many reasons why a pentester would want to quickly fire up a web server.
+Imagine having gained access to a machine, and now you need to upload a payload or a script.  You could try messing around with file transfer protocols.  But it would be much easier to just use a one-liner and spin up a quick HTTP server.
+The reverse scenario is also true.  Sometimes, you’ve got to exfiltrate fil...</summary>
+
+  </entry>
 
   
   <entry>
@@ -34,9 +60,7 @@
 
   
     
-    <category term="CTF" />
-    
-    <category term="Pentesting" />
+    <category term="Thinking out loud" />
     
   
 
