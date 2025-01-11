@@ -18,15 +18,15 @@
 </url>
 <url>
 <loc>https://dgeorgak.github.io/categories/</loc>
-<lastmod>2025-01-11T19:23:43+00:00</lastmod>
+<lastmod>2025-01-11T19:27:25+00:00</lastmod>
 </url>
 <url>
 <loc>https://dgeorgak.github.io/tags/</loc>
-<lastmod>2025-01-11T19:23:43+00:00</lastmod>
+<lastmod>2025-01-11T19:27:25+00:00</lastmod>
 </url>
 <url>
 <loc>https://dgeorgak.github.io/archives/</loc>
-<lastmod>2025-01-11T19:23:43+00:00</lastmod>
+<lastmod>2025-01-11T19:27:25+00:00</lastmod>
 </url>
 <url>
 <loc>https://dgeorgak.github.io/about/</loc>
@@ -73,5 +73,8 @@
 </url>
 <url>
 <loc>https://dgeorgak.github.io/categories/thinking-out-loud/</loc>
+</url>
+<url>
+<loc>https://dgeorgak.github.io/categories/webserver/</loc>
 </url>
 </urlset>
