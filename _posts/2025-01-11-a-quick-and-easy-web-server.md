@@ -1,7 +1,7 @@
 ---
 title: A quick and easy web server
 date: 2025-01-11
-categories: [Tools]
+categories: [Tools, webserver]
 tags: [ctf, pentest, intro, web-server]     # TAG names should always be lowercase
 ---
 
