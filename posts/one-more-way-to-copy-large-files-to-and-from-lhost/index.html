@@ -30,22 +30,23 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="intro" />
+<meta property="og:title" content="One more way to copy large files to and from lhost" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Dim online" />
-<meta property="og:description" content="Dim online" />
-<link rel="canonical" href="https://dgeorgak.github.io/tags/intro/" />
-<meta property="og:url" content="https://dgeorgak.github.io/tags/intro/" />
+<meta name="description" content="Lets say that you found a large .bak file in the rhost and you want to copy it to your lhost for investigation purposes. Or you need to copy a script to the rhost and fire it up for your exploit to take effect. And in both of these cases there are no tools present that might prove useful to do such a thing. The solution provided in this post will work both directions, and it works by encoding said file(s) as base64. For this scenario we will copy /etc/passwd of our target to our own lhost. In the rhost run base64 /etc/passwd &gt; b64_passwd This will encode /etc/passwd and pass the encoded text to the file b64_passwd Open b64_passwd in a text editor (eg nano) and copy the whole text On your lhost paste the copied text to a new file b64_passwd2 Then run base64 -d b64_passwd2 &gt; obtained_passwd This command will decode the contents of the b64_passwd2 file and pass the resulting text to obtained_passwd Now you have the contents of rhost’s /etc/passwd file on your own obtained_passwd file" />
+<meta property="og:description" content="Lets say that you found a large .bak file in the rhost and you want to copy it to your lhost for investigation purposes. Or you need to copy a script to the rhost and fire it up for your exploit to take effect. And in both of these cases there are no tools present that might prove useful to do such a thing. The solution provided in this post will work both directions, and it works by encoding said file(s) as base64. For this scenario we will copy /etc/passwd of our target to our own lhost. In the rhost run base64 /etc/passwd &gt; b64_passwd This will encode /etc/passwd and pass the encoded text to the file b64_passwd Open b64_passwd in a text editor (eg nano) and copy the whole text On your lhost paste the copied text to a new file b64_passwd2 Then run base64 -d b64_passwd2 &gt; obtained_passwd This command will decode the contents of the b64_passwd2 file and pass the resulting text to obtained_passwd Now you have the contents of rhost’s /etc/passwd file on your own obtained_passwd file" />
+<link rel="canonical" href="https://dgeorgak.github.io/posts/one-more-way-to-copy-large-files-to-and-from-lhost/" />
+<meta property="og:url" content="https://dgeorgak.github.io/posts/one-more-way-to-copy-large-files-to-and-from-lhost/" />
 <meta property="og:site_name" content="Dim online" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-12T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="intro" />
+<meta property="twitter:title" content="One more way to copy large files to and from lhost" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Dim online","headline":"intro","url":"https://dgeorgak.github.io/tags/intro/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-01-12T00:00:00+00:00","datePublished":"2025-01-12T00:00:00+00:00","description":"Lets say that you found a large .bak file in the rhost and you want to copy it to your lhost for investigation purposes. Or you need to copy a script to the rhost and fire it up for your exploit to take effect. And in both of these cases there are no tools present that might prove useful to do such a thing. The solution provided in this post will work both directions, and it works by encoding said file(s) as base64. For this scenario we will copy /etc/passwd of our target to our own lhost. In the rhost run base64 /etc/passwd &gt; b64_passwd This will encode /etc/passwd and pass the encoded text to the file b64_passwd Open b64_passwd in a text editor (eg nano) and copy the whole text On your lhost paste the copied text to a new file b64_passwd2 Then run base64 -d b64_passwd2 &gt; obtained_passwd This command will decode the contents of the b64_passwd2 file and pass the resulting text to obtained_passwd Now you have the contents of rhost’s /etc/passwd file on your own obtained_passwd file","headline":"One more way to copy large files to and from lhost","mainEntityOfPage":{"@type":"WebPage","@id":"https://dgeorgak.github.io/posts/one-more-way-to-copy-large-files-to-and-from-lhost/"},"url":"https://dgeorgak.github.io/posts/one-more-way-to-copy-large-files-to-and-from-lhost/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>intro | Dim online
+  <title>One more way to copy large files to and from lhost | Dim online
   </title>
 
   <!--
@@ -109,9 +110,16 @@
   <!-- 3rd-party Dependencies -->
 
   
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.29.0/dist/tocbot.min.css">
   
 
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
+  
+
+  
+    <!-- Image Popup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
   
 
   <!-- JavaScript -->
@@ -386,14 +394,10 @@
           
         
           
-            <span>
-              <a href="/tags/">Tags</a>
-            </span>
-          
         
           
             
-              <span>intro</span>
+              <span>One more way to copy large files to and from lhost</span>
             
 
           
@@ -407,7 +411,7 @@
     </button>
 
     <div id="topbar-title">
-      Tag
+      Post
     </div>
 
     <button type="button" id="search-trigger" class="btn btn-link">
@@ -433,27 +437,88 @@
         <div class="row flex-grow-1">
           <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
             
-              
+              <!-- Refactor the HTML structure -->
 
 
 
-<article class="px-1">
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+
+<!-- Handle images -->
+
+
+
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
   
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
+
+
+
+
+
+
+
+
+
+<article class="px-1" data-toc="false">
+  <header>
+    <h1 data-toc-skip>One more way to copy large files to and from lhost</h1>
     
 
-
-
-<div id="page-tag">
-  <h1 class="ps-lg-2">
-    <i class="fa fa-tag fa-fw text-muted"></i>
-    intro
-    <span class="lead text-muted ps-2">4</span>
-  </h1>
-  <ul class="content ps-0">
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/a-quick-and-easy-web-server/">A quick and easy web server</a>
-        <span class="dash flex-grow-1"></span>
+    <div class="post-meta text-muted">
+      <!-- published date -->
+      <span>
+        Posted
         <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
@@ -464,94 +529,206 @@
 
 <time
   
-    class="text-muted small text-nowrap"
-  
-  data-ts="1736553600"
+  data-ts="1736640000"
   data-df="ll"
   
->
-  Jan 11, 2025
-</time>
-
-      </li>
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/CTF-vs-Pentest-engagement/">CTF vs Pentest engagement</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-    class="text-muted small text-nowrap"
-  
-  data-ts="1726617600"
-  data-df="ll"
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Sep 18, 2024
+  Jan 12, 2025
 </time>
 
-      </li>
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/feroxbuster/">feroxbuster</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
+      </span>
+
+      <!-- lastmod date -->
+      
+
+      
+
+      <div class="d-flex justify-content-between">
+        <!-- author(s) -->
+        <span>
+          
+
+          By
+
+          <em>
+            
+              <a href="https://github.com/dgeorgak">Dim</a>
+            
+          </em>
+        </span>
+
+        <div>
+          <!-- pageviews -->
+          
+
+          <!-- read time -->
+          <!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+
+
+<!-- words per minute -->
 
 
 
 
-<time
-  
-    class="text-muted small text-nowrap"
-  
-  data-ts="1716940800"
-  data-df="ll"
-  
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="357 words"
 >
-  May 29, 2024
-</time>
+  <em>1 min</em> read</span>
 
-      </li>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+
+  <div class="content">
+    <p>Lets say that you found a large .bak file in the rhost and you want to copy it to your lhost for investigation purposes.<br />
+Or you need to copy a script to the rhost and fire it up for your exploit to take effect.
+And in both of these cases there are no tools present that might prove useful to do such a thing.
+The solution provided in this post will work both directions, and it works by encoding said file(s) as base64.
+For this scenario we will copy <code class="language-plaintext highlighter-rouge">/etc/passwd</code> of our target to our own lhost.</p>
+<ol>
+  <li>In the rhost run <code class="language-plaintext highlighter-rouge">base64 /etc/passwd &gt; b64_passwd</code>
+ This will encode <code class="language-plaintext highlighter-rouge">/etc/passwd</code> and pass the encoded text to the file <code class="language-plaintext highlighter-rouge">b64_passwd</code></li>
+  <li>Open <code class="language-plaintext highlighter-rouge">b64_passwd</code> in a text editor (eg nano) and copy the whole text</li>
+  <li>On your lhost paste the copied text to a new file <code class="language-plaintext highlighter-rouge">b64_passwd2</code></li>
+  <li>Then run <code class="language-plaintext highlighter-rouge">base64 -d b64_passwd2 &gt; obtained_passwd</code>
+ This command will decode the contents of the <code class="language-plaintext highlighter-rouge">b64_passwd2</code> file and pass the resulting text to <code class="language-plaintext highlighter-rouge">obtained_passwd</code></li>
+  <li>Now you have the contents of rhost’s <code class="language-plaintext highlighter-rouge">/etc/passwd</code> file on your own <code class="language-plaintext highlighter-rouge">obtained_passwd</code> file</li>
+</ol>
+
+<p>For the next scenario we will copy <code class="language-plaintext highlighter-rouge">linpeas.sh</code> from our lhost to the rhost.  This could be done manually by following the instructions above, but this time encoding our local file, copying its contents over to the rhost, and encoding there.<br />
+The problem in this case is that <code class="language-plaintext highlighter-rouge">linpeas.sh</code> will result in a very long <code class="language-plaintext highlighter-rouge">base64</code> text which will make it difficult and error prone to paste it piece by piece.  To solve this, we will automate the part of copying the encoded text to our clipboard, so that we can carry it over to the rhost by pasting only once.
+For this reason we will use <code class="language-plaintext highlighter-rouge">xclip</code>.  If not already present, you can install it by running <code class="language-plaintext highlighter-rouge">sudo apt install xclip</code> (or the equivalent of your distro).
+The steps for this case are the following:</p>
+<ol>
+  <li>Run <code class="language-plaintext highlighter-rouge">base64 /opt/linpeas/linpeas.sh | xclip -selection clipboard</code>
+ This command will encode <code class="language-plaintext highlighter-rouge">linpeas.sh</code>, and pipe it to our clipboard</li>
+  <li>On rhost paste to a new file (eg <code class="language-plaintext highlighter-rouge">b64_lp</code>)</li>
+  <li>Now run <code class="language-plaintext highlighter-rouge">base64 -d b64_lp &gt; linpeas.sh</code></li>
+  <li><code class="language-plaintext highlighter-rouge">linpeas.sh</code> is now available in rhost</li>
+</ol>
+
+  </div>
+
+  <div class="post-tail-wrapper text-muted">
+    <!-- categories -->
     
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/nmap-intro/">nmap intro</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-    class="text-muted small text-nowrap"
-  
-  data-ts="1716681600"
-  data-df="ll"
-  
->
-  May 26, 2024
-</time>
-
-      </li>
+      <div class="post-meta mb-3">
+        <i class="far fa-folder-open fa-fw me-1"></i>
+        
+          <a href="/categories/tips/">Tips</a>,
+          <a href="/categories/ctf/">CTF</a>
+      </div>
     
-  </ul>
+
+    <!-- tags -->
+    
+      <div class="post-tags">
+        <i class="fa fa-tags fa-fw me-1"></i>
+        
+          <a
+            href="/tags/ctf/"
+            class="post-tag no-text-decoration"
+          >ctf</a>
+        
+          <a
+            href="/tags/pentest/"
+            class="post-tag no-text-decoration"
+          >pentest</a>
+        
+          <a
+            href="/tags/copy-file/"
+            class="post-tag no-text-decoration"
+          >copy_file</a>
+        
+      </div>
+    
+
+    <div
+      class="
+        post-tail-bottom
+        d-flex justify-content-between align-items-center mt-5 pb-2
+      "
+    >
+      <div class="license-wrapper">
+        
+          
+
+          This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+        
+      </div>
+
+      <!-- Post sharing snippet -->
+
+<div class="share-wrapper d-flex align-items-center">
+  <span class="share-label text-muted">Share</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+
+      
+
+      <a href="https://twitter.com/intent/tweet?text=One%20more%20way%20to%20copy%20large%20files%20to%20and%20from%20lhost%20-%20Dim%20online&url=https%3A%2F%2Fdgeorgak.github.io%2Fposts%2Fone-more-way-to-copy-large-files-to-and-from-lhost%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+        <i class="fa-fw fa-brands fa-square-x-twitter"></i>
+      </a>
+    
+
+      
+
+      <a href="https://www.facebook.com/sharer/sharer.php?title=One%20more%20way%20to%20copy%20large%20files%20to%20and%20from%20lhost%20-%20Dim%20online&u=https%3A%2F%2Fdgeorgak.github.io%2Fposts%2Fone-more-way-to-copy-large-files-to-and-from-lhost%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+
+      
+
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fdgeorgak.github.io%2Fposts%2Fone-more-way-to-copy-large-files-to-and-from-lhost%2F&text=One%20more%20way%20to%20copy%20large%20files%20to%20and%20from%20lhost%20-%20Dim%20online" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <button
+      id="copy-link"
+      aria-label="Copy link"
+      class="btn small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Copy link"
+      data-title-succeed="Link copied successfully!"
+    >
+      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+    </button>
+  </span>
 </div>
 
-  
+    </div>
+    <!-- .post-tail-bottom -->
+  </div>
+  <!-- div.post-tail-wrapper -->
 </article>
+
 
             
           </main>
@@ -1018,12 +1195,182 @@
             </div>
 
             
+              
+              
+
+
+
+
+
+
+
+            
           </aside>
         </div>
 
         <div class="row">
           <!-- tail -->
           <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4">
+            
+              
+              <!-- Recommend the other 3 posts according to the tags and categories of the current post. -->
+
+<!-- The total size of related posts -->
+
+
+<!-- An random integer that bigger than 0 -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+  <aside id="related-posts" aria-labelledby="related-label">
+    <h3 class="mb-4" id="related-label">Further Reading</h3>
+    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
+      
+        <article class="col">
+          <a href="/posts/a-quick-and-easy-web-server/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1736553600"
+  data-df="ll"
+  
+>
+  Jan 11, 2025
+</time>
+
+              <h4 class="pt-0 my-2">A quick and easy web server</h4>
+              <div class="text-muted">
+                <p>There are many reasons why a pentester would want to quickly fire up a web server.
+Imagine having gained access to a machine, and now you need to upload a payload or a script.  You could try messin...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+        <article class="col">
+          <a href="/posts/CTF-vs-Pentest-engagement/" class="post-preview card h-100">
+            <div class="card-body">
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1726617600"
+  data-df="ll"
+  
+>
+  Sep 18, 2024
+</time>
+
+              <h4 class="pt-0 my-2">CTF vs Pentest engagement</h4>
+              <div class="text-muted">
+                <p>One of the common misconceptions for new people joining the pentesting community is that a CTF emulates a real pentest engagement.  And it makes sense, because a CTF is among the first things that ...</p>
+              </div>
+            </div>
+          </a>
+        </article>
+      
+    </nav>
+  </aside>
+  <!-- #related-posts -->
+
+
+            
+              
+              <!-- Navigation buttons at the bottom of the post. -->
+
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  
+  
+
+  
+    <a
+      href="/posts/a-quick-and-easy-web-server/"
+      class="btn btn-outline-primary"
+      aria-label="Older"
+    >
+      <p>A quick and easy web server</p>
+    </a>
+  
+
+  
+    <div class="btn btn-outline-primary disabled" aria-label="Newer">
+      <p>-</p>
+    </div>
+  
+</nav>
+
+            
+              
+              <!-- The comments switcher -->
+
+
             
 
             <!-- The Footer -->
@@ -1521,6 +1868,13 @@
 <!-- layout specified -->
 
 
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
 
 
 
@@ -1570,9 +1924,30 @@
 
   
 
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
+
+  
+    
+
+    
+
+  
 
 
-  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/en.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.13/dayjs.min.js,npm/dayjs@1.11.13/locale/en.js,npm/dayjs@1.11.13/plugin/relativeTime.js,npm/dayjs@1.11.13/plugin/localizedFormat.js"></script>
 
 
 
@@ -1580,11 +1955,15 @@
 
 
 
-<script src="/assets/js/dist/misc.min.js"></script>
+<script src="/assets/js/dist/post.min.js"></script>
 
 
 
 <!-- Pageviews -->
+
+  
+
+  
 
 
 

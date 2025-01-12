@@ -4,7 +4,7 @@
   <id>https://dgeorgak.github.io/</id>
   <title>Dim online</title>
   <subtitle>Dim online</subtitle>
-  <updated>2025-01-11T19:27:25+00:00</updated>
+  <updated>2025-01-12T16:30:45+00:00</updated>
   <author>
     <name>Dim</name>
     <uri>https://dgeorgak.github.io/</uri>
@@ -17,6 +17,35 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>One more way to copy large files to and from lhost</title>
+    <link href="https://dgeorgak.github.io/posts/one-more-way-to-copy-large-files-to-and-from-lhost/" rel="alternate" type="text/html" title="One more way to copy large files to and from lhost" />
+    <published>2025-01-12T00:00:00+00:00</published>
+  
+    <updated>2025-01-12T00:00:00+00:00</updated>
+  
+    <id>https://dgeorgak.github.io/posts/one-more-way-to-copy-large-files-to-and-from-lhost/</id>
+    <content src="https://dgeorgak.github.io/posts/one-more-way-to-copy-large-files-to-and-from-lhost/" />
+    <author>
+      <name>Dim</name>
+    </author>
+
+  
+    
+    <category term="Tips" />
+    
+    <category term="CTF" />
+    
+  
+
+  <summary>Lets say that you found a large .bak file in the rhost and you want to copy it to your lhost for investigation purposes.
+Or you need to copy a script to the rhost and fire it up for your exploit to take effect.
+And in both of these cases there are no tools present that might prove useful to do such a thing.
+The solution provided in this post will work both directions, and it works by encoding s...</summary>
+
+  </entry>
 
   
   <entry>
