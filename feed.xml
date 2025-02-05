@@ -4,7 +4,7 @@
   <id>https://dgeorgak.github.io/</id>
   <title>Dim online</title>
   <subtitle>Dim online</subtitle>
-  <updated>2025-01-12T16:30:45+00:00</updated>
+  <updated>2025-02-05T17:10:36+00:00</updated>
   <author>
     <name>Dim</name>
     <uri>https://dgeorgak.github.io/</uri>
@@ -17,6 +17,41 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>find cheatsheet</title>
+    <link href="https://dgeorgak.github.io/posts/find-cheatsheet/" rel="alternate" type="text/html" title="find cheatsheet" />
+    <published>2025-02-05T00:00:00+00:00</published>
+  
+    <updated>2025-02-05T00:00:00+00:00</updated>
+  
+    <id>https://dgeorgak.github.io/posts/find-cheatsheet/</id>
+    <content src="https://dgeorgak.github.io/posts/find-cheatsheet/" />
+    <author>
+      <name>Dim</name>
+    </author>
+
+  
+    
+    <category term="Tools" />
+    
+    <category term="find" />
+    
+  
+
+  <summary>“find”.
+An ever present, and very essential tool in the cli.
+With find one can… well… find files and directories in the system they are in.
+Sometimes the command seems a bit intimidating in its use though.  So rather than learning its ins and outs by heart, why not make a cheatsheet for it?
+
+So here are
+5 basic and useful find commands
+for your everyday basic cli needs.
+1. Find a file by name:
+...</summary>
+
+  </entry>
 
   
   <entry>
@@ -124,38 +159,6 @@ The reverse scenario is also true.  Sometimes, you’ve got to exfiltrate fil...
   <summary>Imagine the following target: https://www.myexampletarget.com.  Now imagine that somewhere in there is an admin page that presents a login screen that is susceptible to SQLi, and as a bonus it showcases the version of the webapp behind it.  The login page’s url is https://www.myexampletarget.com/dev/pages/member.admin.
 
 But there is one caveat.  You do not know about it.  You do not know the ur...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>nmap intro</title>
-    <link href="https://dgeorgak.github.io/posts/nmap-intro/" rel="alternate" type="text/html" title="nmap intro" />
-    <published>2024-05-26T00:00:00+00:00</published>
-  
-    <updated>2024-05-26T00:00:00+00:00</updated>
-  
-    <id>https://dgeorgak.github.io/posts/nmap-intro/</id>
-    <content src="https://dgeorgak.github.io/posts/nmap-intro/" />
-    <author>
-      <name>Dim</name>
-    </author>
-
-  
-    
-    <category term="Tools" />
-    
-    <category term="nmap" />
-    
-  
-
-  <summary>So you have a target IP and want to scan for open ports.
-If you have no knowledge of nmap then I would suggest to go through its man pages (as you should for any cli tool), but in the meantime you can use this specific command to -hopefully- get some quick results.
-nmap target-IP
-
-This is the most basic of scans that nmap can do.
-So what does this do?
-It scans the target IP’s top 1000 ports to ...</summary>
 
   </entry>
 
